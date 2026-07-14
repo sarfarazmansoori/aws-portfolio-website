@@ -1,4 +1,167 @@
 :root {
+    --aws-squid-ink: #232F3E;
+    --aws-orange: #FF9900;
+    --bg-dark: #0f172a;
+    --panel-bg: #1e293b;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --code-font: 'Fira Code', monospace;
+    --sans-font: 'Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--sans-font);
+    line-height: 1.6;
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+/* System Status Bar */
+.system-status {
+    background: var(--aws-squid-ink);
+    padding: 8px 20px;
+    font-family: var(--code-font);
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--aws-orange);
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 8px #10b981;
+}
+
+.status-text { color: #10b981; }
+
+/* Hero Section */
+.hero {
+    padding: 80px 0 60px;
+    border-bottom: 1px solid #334155;
+}
+
+.glitch {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.role-title {
+    font-family: var(--code-font);
+    color: var(--aws-orange);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-subtext {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.terminal-links a {
+    font-family: var(--code-font);
+    color: var(--text-main);
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 8px 12px;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.terminal-links a:hover {
+    border-color: var(--aws-orange);
+    color: var(--aws-orange);
+    background: rgba(255, 153, 0, 0.1);
+}
+
+/* Dashboard Panels */
+.dashboard-panel {
+    margin: 40px 0;
+}
+
+.panel-header h3 {
+    font-family: var(--code-font);
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.tech-card {
+    background: var(--panel-bg);
+    padding: 25px;
+    border-radius: 8px;
+    border-top: 3px solid var(--aws-squid-ink);
+    transition: transform 0.2s;
+}
+
+.tech-card:hover {
+    border-top-color: var(--aws-orange);
+    transform: translateY(-5px);
+}
+
+.tech-card i {
+    font-size: 2rem;
+    color: var(--aws-orange);
+    margin-bottom: 15px;
+}
+
+.tech-card h4 { margin-bottom: 10px; color: white; }
+.tech-card p { color: var(--text-muted); font-size: 0.9rem; }
+
+/* Architecture Cards */
+.architecture-card {
+    background: var(--panel-bg);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #334155;
+}
+
+.arch-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.arch-header h4 { font-size: 1.2rem; color: white; }
+
+.badge {
+    font-family: var(--code-font);
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: rgba(255, 153, 0, 0.1);
+    color: var(--aws-orange);
+    border: 1px solid var(--aws-orange);
+}
+
+.architecture-card p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.architecture-card strong { color: #cbd5e1; }:root {
     --primary-color: #232F3E; /* AWS Navy */
     --accent-color: #FF9900; /* AWS Orange */
     --text-color: #333333;
